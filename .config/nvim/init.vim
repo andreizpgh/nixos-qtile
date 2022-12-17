@@ -55,6 +55,9 @@ nnoremap <leader>t :Rg
 " Clear search highlighting
 nnoremap <CR> :noh<CR>
 
+" Case insensitive search
+:set ic
+
 " Working with multiple windows
 nnoremap <Leader>w <C-w>w
 nnoremap <Leader>q <C-w>q
