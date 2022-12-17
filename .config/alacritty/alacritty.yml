@@ -1,0 +1,42 @@
+# ALACRITTY CONFIGURATION FILE                         
+
+
+import:
+  - ~/.config/alacritty/doom-one.yml
+
+env:
+    TERM: alacritty
+
+# background_opacity: 0.9
+window:
+  dynamic_title: true
+  # Blank space added around the window in pixels. This padding is scaled
+  # by DPI and the specified value is always added at both opposing sides.
+  padding:
+    x: 6
+    y: 2
+
+  # Spread additional padding evenly around the terminal content.
+  dynamic_padding: true
+
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 10000
+
+  # Number of lines the viewport will move for every line scrolled when
+  # scrollback is enabled (history > 0).
+  multiplier: 1
+
+# Font configuration
+font:
+  normal:
+    family: RobotoMono
+    style: Medium 
+# Point size
+  size: 9
+
+key_bindings:
+  # (Windows, Linux, and BSD only)
+  - { key: V,        mods: Control,       action: Paste            }
+  - { key: C,        mods: Control,       action: Copy             }  

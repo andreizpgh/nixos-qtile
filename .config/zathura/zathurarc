@@ -1,0 +1,54 @@
+# ZATHURA CONFIGURATION FILE
+
+
+set window-title-basename "true"
+set selection-clipboard "clipboard"
+
+# Startup options
+
+set adjust-open width
+set recolor true
+
+# <ctrl+r> – swaps Foreground for Background to get a light version
+
+# Doom One Color Theme
+# Based on: https://github.com/dracula/zathura
+
+set notification-error-bg       "#ff6c6b" # Red
+set notification-error-fg       "#bbc2cf" # Foreground
+set notification-warning-bg     "#ffb86c" # Orange
+set notification-warning-fg     "#bbc2cf" # Selection
+set notification-bg             "#282c34" # Background
+set notification-fg             "#bbc2cf" # Foreground
+
+set completion-bg               "#282a36" # Background
+set completion-fg               "#6272a4" # Comment
+set completion-group-bg         "#282c34" # Background
+set completion-group-fg         "#6272a4" # Comment
+set completion-highlight-bg     "#bbc2cf" # Selection
+set completion-highlight-fg     "#bbc2cf" # Foreground
+
+set index-bg                    "#282c34" # Background
+set index-fg                    "#bbc2cf" # Foreground
+set index-active-bg             "#44475a" # Current Line
+set index-active-fg             "#bbc2cf" # Foreground
+
+set inputbar-bg                 "#282c34" # Background
+set inputbar-fg                 "#bbc2cf" # Foreground
+set statusbar-bg                "#282c34" # Background
+set statusbar-fg                "#bbc2cf" # Foreground
+
+set highlight-color             "#bbc2cf" # White
+set highlight-active-color      "#bbc2cf" # White
+
+set default-bg                  "#282c34" # Background
+set default-fg                  "#bbc2cf" # Foreground
+
+set render-loading              true
+set render-loading-fg           "#282c34" # Background
+set render-loading-bg           "#bbc2cf" # Foreground
+
+# Recolor mode settings
+
+set recolor-lightcolor          "#282c34" # Background
+set recolor-darkcolor           "#bbc2cf" # Foreground

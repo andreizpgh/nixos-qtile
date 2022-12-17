@@ -1,0 +1,8 @@
+@theme "/home/andrei/.local/share/rofi/themes/rounded-blue-dark.rasi"
+
+configuration {
+
+  kb-row-down: "[34]";
+  kb-row-up: "[35]";
+
+}

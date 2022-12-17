@@ -1,0 +1,7 @@
+picom &
+feh --bg-scale /home/andrei/Pictures/.wallpaper.png &
+rofi &
+flameshot &
+syncthing &
+udevil &
+/home/andrei/.nix-profile/bin/greenclip daemon &
