@@ -8,21 +8,21 @@
 | /dev/sda1 | linux-swap  | swap  | 2048 | –     |
 | /dev/sda2 | ext4        | msdos | –    | boot  |
 
-### 2. Nixos configuration
+### 2. Nixos Configuration
 
 `sudo mount /dev/disk/by-label/msdos /mnt`
 
 `sudo nixos-generate-config --root /mnt`
 
 ```
-sudo wget -P /mnt/etc/nixos/configuration.nix https://raw.githubusercontent.com/andreizpgh/nixos/main/basic-configuration.nix
+sudo wget -P /mnt/etc/nixos/configuration.nix https://raw.githubusercontent.com/andreizpgh/nixos-qtile/main/nixos-qtile/basic-configuration.nix
 ```
 
 `sudo nixos-install`
 
 `sudo reboot`
 
-### 3. Further configuration
+### 3. Further Configuration
 
 - **Log in as root and set password**
 `passwd andrei`
@@ -30,11 +30,13 @@ sudo wget -P /mnt/etc/nixos/configuration.nix https://raw.githubusercontent.com/
 - **Activate an internet connection**
 `nmtui`
 
-- **Git clone the repo**
+- **Clone the repo**
+
+`git clone https://github.com/andreizpgh/nixos-qtile`
 
 - **Rewrite configuration.nix**
 ```
-sudo rm /etc/nixos/configuration.nix && sudo ln -s /home/andrei/nixos/nixos/configuration.nix /etc/nixos/configuration.nix 
+sudo rm /etc/nixos/configuration.nix && sudo ln -s /home/andrei/nixos-qtile/nixos-qtile/configuration.nix /etc/nixos/configuration.nix 
 ```
 
 - **Reboot** 
@@ -44,9 +46,13 @@ sudo rm /etc/nixos/configuration.nix && sudo ln -s /home/andrei/nixos/nixos/conf
 
 - **Command**
 ```
-mkdir .cache/zsh /home/andrei/.config/alacritty /home/andrei/.config/nvim /home/andrei/.config/rofi /home/andrei/.config/zathura && touch .cache/zsh/history .cache/greenclip.history && rm -rf /home/andrei/Desktop /home/andrei/nixos/.git && rm /home/andrei/.config/vifm/vifmrc && stow -d /home/andrei/nixos . && sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+mkdir .cache/zsh /home/andrei/.config/alacritty /home/andrei/.config/nvim /home/andrei/.config/rofi /home/andrei/.config/zathura && touch .cache/zsh/history .cache/greenclip.history && rm -rf /home/andrei/Desktop && rm /home/andrei/.config/vifm/vifmrc && stow -d /home/andrei/nixos-qtile . && sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' && nix-env -iA nixos.zsh-autosuggestions && nix-env -iA nixos.zsh-syntax-highlighting && lxappearance
 ``` 
+
+- **Neovim**
+
+`PlugUpdate`
 
 - **Install Doom Emacs**
 ```
